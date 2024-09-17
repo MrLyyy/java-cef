@@ -142,7 +142,7 @@ public abstract class CefRequest {
 
         /**
          * Removes a qualifier from the enum.
-         * @param The qualifier to be removed.
+         * @param flag qualifier to be removed.
          */
         public void removeQualifier(TransitionFlags flag) {
             value &= ~flag.getValue();
@@ -322,12 +322,6 @@ public abstract class CefRequest {
 
     // This CTOR can't be called directly. Call method create() instead.
     CefRequest() {}
-
-    @Override
-    protected void finalize() throws Throwable {
-        dispose();
-        super.finalize();
-    }
 
     /**
      * Create a new CefRequest object.

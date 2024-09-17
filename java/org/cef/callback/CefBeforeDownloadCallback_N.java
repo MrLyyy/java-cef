@@ -8,12 +8,6 @@ class CefBeforeDownloadCallback_N extends CefNativeAdapter implements CefBeforeD
     CefBeforeDownloadCallback_N() {}
 
     @Override
-    protected void finalize() throws Throwable {
-        Continue("", false);
-        super.finalize();
-    }
-
-    @Override
     public void Continue(String downloadPath, boolean showDialog) {
         try {
             N_Continue(getNativeRef(null), downloadPath, showDialog);

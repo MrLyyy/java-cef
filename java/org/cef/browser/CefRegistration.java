@@ -16,9 +16,4 @@ abstract class CefRegistration {
      */
     public abstract void dispose();
 
-    @Override
-    public void finalize() throws Throwable {
-        dispose();
-        super.finalize();
-    }
 }

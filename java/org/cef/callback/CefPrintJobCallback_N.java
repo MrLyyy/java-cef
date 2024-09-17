@@ -7,11 +7,6 @@ package org.cef.callback;
 class CefPrintJobCallback_N extends CefNativeAdapter implements CefPrintJobCallback {
     CefPrintJobCallback_N() {}
 
-    @Override
-    protected void finalize() throws Throwable {
-        Continue();
-        super.finalize();
-    }
 
     @Override
     public void Continue() {

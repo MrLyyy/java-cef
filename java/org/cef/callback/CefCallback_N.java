@@ -8,12 +8,6 @@ class CefCallback_N extends CefNativeAdapter implements CefCallback {
     CefCallback_N() {}
 
     @Override
-    protected void finalize() throws Throwable {
-        cancel();
-        super.finalize();
-    }
-
-    @Override
     public void Continue() {
         try {
             N_Continue(getNativeRef(null));

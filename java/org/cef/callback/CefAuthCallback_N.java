@@ -8,12 +8,6 @@ class CefAuthCallback_N extends CefNativeAdapter implements CefAuthCallback {
     CefAuthCallback_N() {}
 
     @Override
-    protected void finalize() throws Throwable {
-        cancel();
-        super.finalize();
-    }
-
-    @Override
     public void Continue(String username, String password) {
         try {
             N_Continue(getNativeRef(null), username, password);

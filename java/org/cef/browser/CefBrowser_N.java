@@ -217,11 +217,6 @@ public abstract class CefBrowser_N extends CefNativeAdapter implements CefBrowse
         return 0;
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        close(true);
-        super.finalize();
-    }
 
     @Override
     public boolean canGoBack() {

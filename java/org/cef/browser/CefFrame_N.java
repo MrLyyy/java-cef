@@ -15,12 +15,6 @@ class CefFrame_N extends CefNativeAdapter implements CefFrame {
     CefFrame_N() {}
 
     @Override
-    protected void finalize() throws Throwable {
-        dispose();
-        super.finalize();
-    }
-
-    @Override
     public void dispose() {
         try {
             N_Dispose(getNativeRef(null));

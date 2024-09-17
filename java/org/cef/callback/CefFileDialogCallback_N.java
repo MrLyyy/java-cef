@@ -10,12 +10,6 @@ class CefFileDialogCallback_N extends CefNativeAdapter implements CefFileDialogC
     CefFileDialogCallback_N() {}
 
     @Override
-    protected void finalize() throws Throwable {
-        Cancel();
-        super.finalize();
-    }
-
-    @Override
     public void Continue(Vector<String> filePaths) {
         try {
             N_Continue(getNativeRef(null), filePaths);

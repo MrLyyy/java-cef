@@ -7,11 +7,6 @@ package org.cef.callback;
 class CefQueryCallback_N extends CefNativeAdapter implements CefQueryCallback {
     CefQueryCallback_N() {}
 
-    @Override
-    protected void finalize() throws Throwable {
-        failure(-1, "Unexpected call to CefQueryCallback_N::finalize()");
-        super.finalize();
-    }
 
     @Override
     public void success(String response) {

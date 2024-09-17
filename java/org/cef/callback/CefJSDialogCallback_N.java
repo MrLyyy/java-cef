@@ -7,11 +7,6 @@ package org.cef.callback;
 class CefJSDialogCallback_N extends CefNativeAdapter implements CefJSDialogCallback {
     CefJSDialogCallback_N() {}
 
-    @Override
-    protected void finalize() throws Throwable {
-        Continue(false, "");
-        super.finalize();
-    }
 
     @Override
     public void Continue(boolean success, String user_input) {

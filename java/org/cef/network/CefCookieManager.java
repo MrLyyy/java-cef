@@ -7,7 +7,6 @@ package org.cef.network;
 import org.cef.callback.CefCompletionCallback;
 import org.cef.callback.CefCookieVisitor;
 
-import java.util.Vector;
 
 /**
  * Class used for managing cookies. The methods of this class may be called on any thread unless
@@ -17,18 +16,13 @@ public abstract class CefCookieManager {
     // This CTOR can't be called directly. Call method create() instead.
     CefCookieManager() {}
 
-    @Override
-    protected void finalize() throws Throwable {
-        dispose();
-        super.finalize();
-    }
 
     /**
      * Returns the global cookie manager. By default data will be stored at CefSettings.cache_path
      * if specified or in memory otherwise.
      * @return The global cookie manager.
      */
-    public static final CefCookieManager getGlobalManager() {
+    public static CefCookieManager getGlobalManager() {
         return CefCookieManager_N.getGlobalManagerNative();
     }
 

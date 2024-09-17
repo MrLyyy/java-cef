@@ -9,11 +9,6 @@ import org.cef.misc.CefPrintSettings;
 class CefPrintDialogCallback_N extends CefNativeAdapter implements CefPrintDialogCallback {
     CefPrintDialogCallback_N() {}
 
-    @Override
-    protected void finalize() throws Throwable {
-        cancel();
-        super.finalize();
-    }
 
     @Override
     public void Continue(CefPrintSettings settings) {
